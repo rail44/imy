@@ -1,15 +1,9 @@
 {
-  "scripts": {
-    "start": "snowpack dev",
-    "build": "snowpack build",
-    "test": "echo \"This template does not include a test runner by default.\" && exit 1",
-    "format": "prettier --write \"src/**/*.js\"",
-    "lint": "prettier --check \"src/**/*.js\""
-  },
   "dependencies": {
     "solid-js": "^0.18.11"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.10.1",
     "@snowpack/plugin-babel": "^1.4.0",
     "babel-preset-solid": "^0.18.11",
     "prettier": "^2.0.0",

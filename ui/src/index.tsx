@@ -1,5 +1,9 @@
 import { render } from "solid-js/dom";
 
-const HelloMessage = props => <div>Hello {props.name}</div>;
+const App = () => {
+  return (
+    <div>Hello World</div>
+  );
+};
 
-render(() => <HelloMessage name="Taylor" />, document.getElementById("app"));
+render(() => <App />, document.getElementById("app"));

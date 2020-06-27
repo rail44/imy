@@ -1,8 +1,7 @@
 {
   "scripts": {
     "mount:public": "mount public --to /",
-    "mount:src": "mount src --to /js",
-    "build:tsx": "@snowpack/plugin-babel"
+    "mount:src": "mount src --to /js"
   },
   "plugins": ["@snowpack/plugin-babel"]
 }
