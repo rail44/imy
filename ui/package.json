@@ -1,19 +1,16 @@
 {
   "dependencies": {
-    "@babel/preset-env": "^7.10.3",
-    "@material/mwc-button": "^0.15.0",
     "google-protobuf": "^3.12.2",
     "grpc-web": "^1.2.0",
     "solid-js": "^0.18.12"
   },
   "devDependencies": {
     "@babel/cli": "~7.10.3",
+    "@babel/core": "^7.10.3",
     "@babel/preset-typescript": "^7.10.1",
     "@rollup/plugin-babel": "^5.0.4",
     "@rollup/plugin-commonjs": "^13.0.0",
-    "@rollup/plugin-html": "^0.2.0",
     "@rollup/plugin-node-resolve": "^8.1.0",
-    "@snowpack/plugin-babel": "~1.4.0",
     "babel-preset-solid": "~0.18.12",
     "prettier": "~2.0.0",
     "rollup": "^2.18.1",

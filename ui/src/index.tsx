@@ -2,8 +2,6 @@ import { render } from "solid-js/dom";
 import ImyGrpc from "../proto/imy_grpc_web_pb";
 import ImyPb from "../proto/imy_pb";
 
-import "@material/mwc-button";
-
 interface Prop {
   message: string,
 }
@@ -11,7 +9,6 @@ interface Prop {
 const App = (prop: Prop) => {
   return (
     <div>
-      <mwc-button>hoge</mwc-button>
       <h1>{prop.message}</h1>
     </div>
   );
