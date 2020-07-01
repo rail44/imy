@@ -10,7 +10,9 @@ use pb::{
         ImyServer,
     },
     EchoResponse,
-    EchoRequest
+    EchoRequest,
+    HashRequest,
+    HashResponse
 };
 
 #[derive(Default)]
@@ -20,9 +22,16 @@ struct Core;
 impl Imy for Core {
     async fn echo(&self, req: Request<EchoRequest>) -> Result<Response<EchoResponse>, Status> {
         let reply = EchoResponse {
-            message: format!("Hello {}!", req.into_inner().message).into(),
+            message: format!("Die {}!", req.into_inner().message).into(),
         };
         Ok(Response::new(reply))
+    }
+
+    async fn hash(&self, req: Request<HashRequest>) -> Result<Response<HashResponse>, Status> {
+        let res = HashResponse {
+            hash: blake3::hash(req.into_inner().message.as_bytes()).to_hex().to_string()
+        };
+        Ok(Response::new(res))
     }
 }
 

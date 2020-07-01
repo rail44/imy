@@ -21,62 +21,54 @@ const App = () => {
 
   const req = new ImyPb.EchoRequest();
   req.setMessage("rail44");
-  client.echo(req, {}, (_err, res) => {
-    setMessage(res.getMessage());
+  client.hash(req, {}, (_err, res) => {
+    setMessage(res.getHash());
   });
 
   return (
-    <>
-      <ion-button>登録</ion-button>
-      <h1>imy</h1>
+    <ion-app>
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="end">
+            <ion-button>
+              <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+            </ion-button>
+            <ion-button>
+              <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+            </ion-button>
+            <ion-button>Sign Up</ion-button>
+            <ion-button>Sign In</ion-button>
+          </ion-buttons>
+          <ion-title>imy forum</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
       <p>{getMessage()}</p>
-      <ion-card>
-        <ion-card-header>
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-          <ion-card-title>Card Title</ion-card-title>
-        </ion-card-header>
 
-        <ion-card-content>
-          Keep close to Nature's heart... and break clear away, once in awhile,
-          and climb a mountain or spend a week in the woods. Wash your spirit clean.
-        </ion-card-content>
-      </ion-card>
-
-      <ion-card>
+      <ion-list>
         <ion-item>
-          <ion-icon name="pin" slot="start"></ion-icon>
-          <ion-label>ion-item in a card, icon left, button right</ion-label>
-          <ion-button fill="outline" slot="end">View</ion-button>
+          <ion-label>Pokémon Yellow</ion-label>
         </ion-item>
-
-        <ion-card-content>
-          This is content, without any paragraph or header tags,
-          within an ion-card-content element.
-        </ion-card-content>
-      </ion-card>
-
-      <ion-card>
-        <ion-item href="#" class="ion-activated">
-          <ion-icon name="wifi" slot="start"></ion-icon>
-          <ion-label>Card Link Item 1 activated</ion-label>
-        </ion-item>
-
-        <ion-item href="#">
-          <ion-icon name="wine" slot="start"></ion-icon>
-          <ion-label>Card Link Item 2</ion-label>
-        </ion-item>
-
-        <ion-item class="ion-activated">
-          <ion-icon name="warning" slot="start"></ion-icon>
-          <ion-label>Card Button Item 1 activated</ion-label>
-        </ion-item>
-
         <ion-item>
-          <ion-icon name="walk" slot="start"></ion-icon>
-          <ion-label>Card Button Item 2</ion-label>
+          <ion-label>Mega Man X</ion-label>
         </ion-item>
-      </ion-card>
-    </>
+        <ion-item>
+          <ion-label>The Legend of Zelda</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Pac-Man</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Super Mario World</ion-label>
+        </ion-item>
+      </ion-list>
+
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button>
+          <ion-icon name="arrow-forward-circle"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </ion-app>
   );
 };
 
