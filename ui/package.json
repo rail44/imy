@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@stencil/core": "^1.15.0",
     "google-protobuf": "^3.12.2",
     "grpc-web": "^1.2.0",
     "solid-js": "^0.18.12"
