@@ -5,7 +5,7 @@ edition = "2018"
 
 [dependencies]
 tonic = "0.2.1"
-diesel = "1.4.5"
+diesel = "1.4.6"
 prost = "0.6.1"
 tokio = { version = "0.2.21", features = ["macros"] }
 blake3 = "0.3.4"
